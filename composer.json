@@ -1,6 +1,6 @@
 {
     "name": "zerp/goal",
-    "description": "Description for goal package",
+    "description": "Financial goal tracking module for the Zerp ERP platform",
     "type": "library",
     "license": "MIT",
     "require": {},

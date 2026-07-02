@@ -18,7 +18,7 @@ class MarketplaceSettingSeeder extends Seeder
             $files = File::files($marketplaceDir);
             foreach ($files as $file) {
                 if (in_array($file->getExtension(), ['png', 'jpg', 'jpeg', 'gif', 'webp'])) {
-                    $screenshots[] = '/packages/workdo/Goal/src/marketplace/' . $file->getFilename();
+                    $screenshots[] = '/packages/local/Goal/src/marketplace/' . $file->getFilename();
                 }
             }
         }
@@ -33,7 +33,7 @@ class MarketplaceSettingSeeder extends Seeder
                 'sections' => [
                     'hero' => [
                         'variant' => 'hero1',
-                        'title' => 'Goal Module for ERPGo SaaS',
+                        'title' => 'Goal Module for Zerp',
                         'subtitle' => 'Streamline your goal workflow with comprehensive tools and automated management.',
                         'primary_button_text' => 'Install Goal Module',
                         'primary_button_link' => '#install',
@@ -55,19 +55,19 @@ class MarketplaceSettingSeeder extends Seeder
                                 'title' => 'Feature 1',
                                 'description' => 'Description of first key feature for goal management.',
                                 'keyPoints' => ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
-                                'screenshot' => '/packages/workdo/Goal/src/marketplace/image1.png'
+                                'screenshot' => '/packages/local/Goal/src/marketplace/image1.png'
                             ],
                             [
                                 'title' => 'Feature 2',
                                 'description' => 'Description of second key feature for goal organization.',
                                 'keyPoints' => ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
-                                'screenshot' => '/packages/workdo/Goal/src/marketplace/image2.png'
+                                'screenshot' => '/packages/local/Goal/src/marketplace/image2.png'
                             ],
                             [
                                 'title' => 'Feature 3',
                                 'description' => 'Description of third key feature for goal tracking.',
                                 'keyPoints' => ['Point 1', 'Point 2', 'Point 3', 'Point 4'],
-                                'screenshot' => '/packages/workdo/Goal/src/marketplace/image3.png'
+                                'screenshot' => '/packages/local/Goal/src/marketplace/image3.png'
                             ]
                         ]
                     ],
