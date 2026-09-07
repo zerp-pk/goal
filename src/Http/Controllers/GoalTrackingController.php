@@ -33,7 +33,7 @@ class GoalTrackingController extends Controller
                 ->when(request('on_track_status'), fn($q) => $q->where('on_track_status', request('on_track_status')))
                 ->when(request('date_from'), fn($q) => $q->whereDate('tracking_date', '>=', request('date_from')))
                 ->when(request('date_to'), fn($q) => $q->whereDate('tracking_date', '<=', request('date_to')))
-                ->when(request('sort'), fn($q) => $q->orderBy(request('sort'), request('direction', 'asc')), fn($q) => $q->latest())
+                ->when(request('sort'), fn($q) => $q->sortSafe(request('sort'), request('direction'), 'created_at', 'desc'), fn($q) => $q->latest())
                 ->paginate(request('per_page', 10))
                 ->withQueryString();
 
